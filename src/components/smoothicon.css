@@ -1,0 +1,114 @@
+.hero{
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+}
+.container_smoothies{
+    background: transparent ;
+    border: none;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    margin-top: 5rem;
+    justify-items: center;
+    justify-content: center;
+    padding: 2.5rem 0.5rem 1.5rem 35rem;
+    background: transparent;
+    
+}
+.avarta{
+    width: 15rem;
+    background: transparent;
+    border: 0.3rem solid green;
+    border-radius: 50%;
+    padding: 1.2rem 0.1rem 0.4rem 1.2rem;
+}
+.container_front{
+    display: flex;
+    justify-content: center;
+    padding-top: 20rem;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 400;
+}
+.container_front,h4{
+    color: rgba(1, 33, 23, 0.6);
+    font-size: 20px;
+}
+
+.btn_item-cta{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    font-weight: 600;
+}
+/*============MEDIA QUERIES (SMALL DEVICES)==================*/
+@media screen and (max-width: 600px){
+    .container_smoothies{
+        background:  transparent;
+      display: flex;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: 0 auto;
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        gap:1rem;
+        padding: 1.1rem 2.3rem 1.5rem 0.4rem;
+    }
+    .avarta{
+       display: flex;
+       align-items: center;
+       width: 100%;
+   }
+   .container_front{
+    display: flex;
+    padding-top: 13rem;
+    margin-top: 1px;
+   text-align: center;
+   font-size: 1rem;
+}
+   p{
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+    h5{
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.5rem;
+    }
+}
+/*============MEDIA QUERIES (MEDIUM DEVICES)==================*/
+@media screen and (max-width:1024px) {
+    .container_smoothies{
+ background:  transparent;
+display: flex;
+ border-radius: 50%;
+ position: absolute;
+ margin-top: 0 auto;
+ overflow: hidden;
+ grid-template-columns: 1fr 1fr;
+ gap:1rem;
+ padding: 1.1rem 2.3rem 1.5rem 0.4rem;
+}
+.avarta{
+display: flex;
+align-items: center;
+width: 100%;
+}
+.portfolio_item-cta{
+    margin-top: 1.7rem;
+}
+p{
+    font-style: italic;
+    padding-top: 1rem;
+    margin-top: 1px;
+    }
+h5{
+    padding-top: 1rem;
+    padding-right: 1rem;
+    font-size: 0.5rem;
+    }
+}

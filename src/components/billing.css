@@ -1,0 +1,168 @@
+.billing-container{
+    display: flex;
+    flex-direction: column;
+    border: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-color: blueviolet;
+
+}
+
+.billin-container-cta{
+max-width: 1140px;
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat(2, 2fr);
+margin-top: 1rem;
+margin-bottom: 1rem;
+padding-left: 1rem;
+gap: 10rem;
+}
+.smoothscriber-detail{
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: -3rem;
+}
+
+.info{
+    width: 90%;
+    height: 70%;
+    border: 1px solid rgb(1, 0, 0);
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.7rem;
+    display: flex;
+    flex-direction:row;
+}
+
+.billin-container-cta .billing-left{
+    border: 2px solid rgb(1, 0, 0);
+    padding-left: 1rem;
+    display:grid;
+    grid-gap: 0.3rem;
+    padding-bottom: 1rem;
+    padding-top: none;
+}
+.billin-container-cta .billing-right{
+    border: 2px solid rgb(1, 0, 0);
+    padding-left: 1rem;
+    justify-content: space-between;
+}
+.gateway-containter{
+    margin-bottom: 1.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1rf);
+    grid-gap: 0.5rem;
+
+}
+.order{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.billing-right .order-cta{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+input,select{
+    width: 95%;
+    display: flex;
+    flex-direction:column;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    resize: none;
+    font-size: 18px;
+    color: var(--color-black);
+}
+.order-cta{
+    margin-bottom: 2rem;
+}
+.billing-right .card{
+    position: absolute;
+    margin-top: -5rem;
+    border-radius: 12rem 12rem 12rem 12rem;
+    overflow: hidden;
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+}
+/*============MEDIA QUERIES (MEDIUM DEVICES)==================*/
+@media screen and (max-width:1024px) {
+    .billin-container-cta{
+        max-width: 770px;
+        grid-template-columns: repeat(1, 2fr);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        gap: 2rem;
+        }
+        .billing-right{
+            height:100%;
+            width: 100%;
+       
+        }
+        .billing-right .order-cta{
+            text-align: left;
+        }
+
+        .info{
+            width: 95%;
+            height: fit-content;
+            text-align: left;
+        }
+       form{
+            margin-bottom: 0.8rem;
+        }
+        .order-cta{
+            display: grid;
+            margin-top: 1rem;
+            grid-gap: 0.3rem;
+            text-align:left;
+        }
+        .order-cta >p{
+            margin-left: 0rem;
+        }
+       
+}
+
+/*============MEDIA QUERIES (SMALL DEVICES)==================*/
+@media screen and (max-width:600px) {
+    .billin-container-cta{
+        max-width: 370px;
+        grid-template-columns: repeat(1, 2fr);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        gap: 2rem;
+        }
+        .billing-left{
+            height:100%;
+            width: 100%;
+            display: flex;
+        }
+        .info{
+            width: 95%;
+            height: fit-content;
+            text-align: left;
+        }
+       form{
+            margin-bottom: 0.8rem;
+        }
+        .order-cta{
+            display: grid;
+            grid-gap: 0.3rem;
+        }
+        .order-cta >p{
+            margin-left: -4.5rem;
+        }
+}

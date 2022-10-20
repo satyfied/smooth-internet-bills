@@ -33,7 +33,7 @@ const Billing = ({ plan }) => {
   };
 
   const handlePaystackSuccessAction = (reference) => {
-    alert(`Transaction Completed! Reference ${reference}`);
+    alert(`Transaction Completed!`);
     window.location.replace("https://smoothbroadband.com/");
   };
   const handlePaystackCloseAction = () => {

@@ -5,7 +5,6 @@ import { PaystackButton } from "react-paystack";
 import "./billing.css";
 import { convertToAmount } from "./Pricing";
 import { Navigate } from "react-router-dom";
-//import {Link} from 'react-router-dom'
 
 const Duration = [
   { duration: 1, type: "Month" },
@@ -18,6 +17,7 @@ const Duration = [
 
 const Billing = ({ plan }) => {
   const [price, setPrice] = React.useState(plan.price);
+  const [days, setDays] = React.useState(30);
   const [selectedMonth, setSelectedMonth] = React.useState(1);
   const [payer, setPayer] = React.useState({ email: "", fullName: "" });
   const [isEmpty, setIsEmpty] = React.useState(true);
@@ -50,6 +50,8 @@ const Billing = ({ plan }) => {
   React.useEffect(() => {
     // ! this code is only updating bill component
     setPrice(plan.price * selectedMonth);
+
+    setDays(30 * selectedMonth);
   }, [selectedMonth]);
 
   return (
@@ -92,7 +94,7 @@ const Billing = ({ plan }) => {
             </p>
             <p>{convertToAmount(price)}</p>
             <p>Plan Duration</p>
-            <p>{plan.duration} Days</p>
+            <p>{days} Days</p>
             <h3>Total</h3>
             <h3>{convertToAmount(price)}</h3>
           </div>
